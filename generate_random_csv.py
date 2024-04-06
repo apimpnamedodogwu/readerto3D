@@ -19,5 +19,5 @@ def generate_random_csv(file_name, num_rows, num_columns):
       row = [random.randint(1, 100) for _ in range(num_columns)]
       writer.writerow(row)
 
-  return file_name  # Return the full file path
+  return file_name  
 

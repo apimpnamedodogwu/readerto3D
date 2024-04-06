@@ -21,6 +21,6 @@ class JSONReader(IFileReader):
                     x, y, z = float(item['x']), float(item['y']), float(item['z'])
                     points.append(rs.Point3d(x, y, z))
                 except ValueError:
-                    print(f"Error parsing item: {item}")  # Handle potential errors
+                    print(f"Error parsing item: {item}")  
 
         return points

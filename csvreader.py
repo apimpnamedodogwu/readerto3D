@@ -15,12 +15,12 @@ class CSVReader(IFileReader):
     """
     points = []
     with open(file_path, 'r') as csv_file:
-      reader = csv.reader(csv_file, delimiter=',')  # Adjust delimiter if needed
+      reader = csv.reader(csv_file, delimiter=',') 
       for row in reader:
         try:
-          x, y, z = float(row[0]), float(row[1]), float(row[2])  # Assuming 3D data
+          x, y, z = float(row[0]), float(row[1]), float(row[2])  
           points.append(rs.Point3d(x, y, z))
         except ValueError:
-          print(f"Error parsing row: {row}")  # Handle potential errors
+          print(f"Error parsing row: {row}") 
 
     return points
